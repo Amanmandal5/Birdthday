@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gurumata</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Courier New", monospace;
+      background: #0b0c10;
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    /* Floating code background */
+    .floating-text {
+      position: absolute;
+      color: rgba(0, 255, 0, 0.4);
+      font-size: 14px;
+      animation: float 20s linear infinite;
+      white-space: nowrap;
+    }
+
+    @keyframes float {
+      from { transform: translateY(100vh); }
+      to { transform: translateY(-120vh); }
+    }
+
+    /* Header */
+    h1 {
+      font-size: 2.5rem;
+      margin-top: 80px;
+      background: linear-gradient(90deg, #0ff, #00f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      color: #aaa;
+    }
+
+    /* Poem Box */
+    .poem-box {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      padding: 20px;
+      max-width: 600px;
+      margin: 20px auto;
+      border: 1px solid rgba(0, 255, 255, 0.2);
+      box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.2);
+    }
+
+    .poem-box p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+
+    /* Icons Section */
+    .icons {
+      margin: 20px;
+      font-size: 2rem;
+    }
+
+    /* Code Snippet */
+    .code-snippet {
+      font-size: 1rem;
+      color: #0f0;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 15px;
+      border-radius: 10px;
+      width: fit-content;
+      margin: 20px auto;
+      text-align: left;
+    }
+
+    /* Quote */
+    .quote {
+      font-style: italic;
+      color: #bbb;
+      margin-top: 20px;
+    }
+
+    /* Back Button */
+    .back {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: linear-gradient(90deg, #4cafef, #2ecc71);
+      padding: 10px 15px;
+      border-radius: 8px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Navigation Links */
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      background: rgba(0,0,0,0.7);
+      padding: 12px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 6px 14px;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+
+    .nav-links a:hover {
+      background: linear-gradient(90deg, #f64f59, #c471ed, #12c2e9);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <!-- Back Button -->
+  <button onclick="location.href='index2.html'" style="position:fixed;top:20px;left:20px;padding:10px 18px;border-radius:8px;background:linear-gradient(90deg,#f64f59,#c471ed,#12c2e9);color:#fff;border:none;font-weight:bold;cursor:pointer;z-index:100;">⬅ Back</button>
+
+  <!-- Floating background text -->
+  <div class="floating-text" style="left:10%; animation-delay:0s;">ソメチソバセヌザパシュヌユレプカップ</div>
+  <div class="floating-text" style="left:60%; animation-delay:3s;">ギュモラキャメージョ ヴリヌタパマエレヅ</div>
+  <div class="floating-text" style="left:80%; animation-delay:6s;">ツヲユヌヅドエボメバミカポタヱ７１ヲ</div>
+  <div class="floating-text" style="left:30%; animation-delay:9s;">ヴヲガデヌヴサワヲルヲヌヅヨコイヅヲ</div>
+
+  <!-- Main Title -->
+  <h1>&lt;&gt; Gurumata &gt;_</h1>
+  <div class="subtitle">Supportive, Caring, Loving, Guiding, Mine</div>
+
+  <!-- Poem -->
+  <div class="poem-box">
+    <p>
+      Tum meri life ki woh roshni ho jo hamesha mujhe sahi raasta dikhati ho,<br>
+      Tum meri galtiyon pe hamesha pyaar se samjhati ho, mujhe grow karna sikhati ho aur har waqt support karti ho.<br>
+      tum meri girlfriend hi nahi, meri best guide aur meri sabse badi strength ho.<br>
+      Payal Gurumata....
+    </p>
+  </div>
+
+  <!-- Icons -->
+  <div class="icons">⚡ 💻 💻 💻 💻</div>
+
+  <!-- Code Snippet -->
+  <div class="code-snippet">
+    class PayalGuru extends CodingMaster {<br>
+    &nbsp;&nbsp;solve(impossibleBug) { return 'Fixed!'; }<br>
+    &nbsp;&nbsp;teach(students) { return enlightenment; }<br>
+    &nbsp;&nbsp;debug(reality) { return perfection; }<br>
+    }
+  </div>
+
+  <!-- Quote -->
+  <div class="quote">
+    "In the realm of code, she is the Oracle of Solutions"<br>
+    - The Matrix acknowledges Payal Gurumata 🧘‍♀️💻
+  </div>
+</body>
+</html>

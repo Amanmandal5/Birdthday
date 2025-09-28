@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kutkuti Payal</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Arial", sans-serif;
+      background: #111;
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    /* Back button */
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: linear-gradient(90deg, #ff512f, #dd2476);
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .back-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 81, 47, 0.8);
+    }
+
+    /* Title */
+    h1 {
+      margin-top: 80px;
+      font-size: 2.2rem;
+      font-weight: bold;
+      background: linear-gradient(90deg, #ff512f, #f09819, #ff512f);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% auto;
+      animation: fireGlow 1.5s infinite alternate;
+    }
+
+    @keyframes fireGlow {
+      from { text-shadow: 0 0 10px #ff512f, 0 0 20px #f09819; }
+      to { text-shadow: 0 0 20px #ff784f, 0 0 40px #ff2200; }
+    }
+
+    /* Angry emoji */
+    .emoji {
+      font-size: 4rem;
+      margin: 20px 0;
+      animation: shake 0.6s infinite;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      75% { transform: translateX(5px); }
+    }
+
+    /* Quote box */
+    .quote-box {
+      background: rgba(255, 0, 0, 0.05);
+      border: 1px solid rgba(255, 80, 80, 0.3);
+      border-radius: 15px;
+      padding: 25px;
+      width: 70%;
+      margin: 30px auto;
+      font-size: 1rem;
+      line-height: 1.5;
+      position: relative;
+      box-shadow: 0 0 25px rgba(255, 60, 60, 0.4);
+      animation: fadeIn 1s ease-in forwards;
+    }
+
+    .quote-box::after {
+      content: "⚠️";
+      position: absolute;
+      top: -12px;
+      right: -12px;
+      font-size: 20px;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.2); opacity: 0.6; }
+    }
+
+    /* Error messages */
+    .error-box {
+      background: #400000;
+      border: 1px solid red;
+      padding: 12px;
+      width: 70%;
+      margin: 15px auto;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      color: #ff4c4c;
+      text-transform: uppercase;
+      animation: glitch 1s infinite;
+    }
+
+    @keyframes glitch {
+      0% { text-shadow: 2px 2px red; }
+      50% { text-shadow: -2px -2px orange; }
+      100% { text-shadow: 2px 2px red; }
+    }
+
+    /* Lightning row */
+    .emojis {
+      margin: 25px 0;
+      font-size: 2rem;
+    }
+    .emojis span {
+      display: inline-block;
+      margin: 0 10px;
+      animation: flash 1s infinite alternate;
+    }
+    .emojis span:nth-child(2) { animation-delay: 0.2s; }
+    .emojis span:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes flash {
+      from { opacity: 0.2; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1.1); color: yellow; }
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 20px;
+      font-style: italic;
+      color: #bbb;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s 1s forwards;
+    }
+    .footer span {
+      color: #ff512f;
+    }
+  </style>
+</head>
+<body>
+  <!-- Back button -->
+  <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+
+  <!-- Title -->
+  <h1>⚡ Kutkuti Payal 🔥</h1>
+
+  <!-- Angry emoji -->
+  <div class="emoji">😠</div>
+
+  <!-- Quote -->
+  <div class="quote-box">
+    "Kutkuti Payal matlab, gussel, ekdum jallad mode on!  
+    Choti si baat pe gussa karna aur muh fulana  favourite hobby hai.  
+    agar merai wajha se uska mood khrb ho jaye toh bas samajh lo duniya khatam hone wali hai!"
+  </div>
+
+  <!-- Error messages -->
+  <div class="error-box">ERROR 404: Patience Not Found</div>
+  <div class="error-box">WARNING: Jallad Mode Activated</div>
+  <div class="error-box">CRITICAL: anger Detected, Preparing Nuclear Response</div>
+
+  <!-- Lightning emojis -->
+  <div class="emojis">
+    <span>⚡</span>
+    <span>⚡</span>
+    <span>⚡</span>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    "Anger is just passion with nowhere to go… except debugging!"<br>
+    – Payal in full <span>Jallad mode 🔥</span>
+  </div>
+</body>
+</html>

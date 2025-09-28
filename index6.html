@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meow Page</title>
+  <style>
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+      position: relative;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      position: relative;
+      padding: 24px;
+    }
+    .back-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      margin-bottom: 24px;
+      background: linear-gradient(90deg, #38ef7d, #1194f6);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    .back-btn:hover {
+      transform: scale(1.05);
+    }
+    .floating-cats {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .cat {
+      position: absolute;
+      font-size: 2em;
+      animation: bounce 3s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-30px); }
+    }
+    .mystery {
+      font-size: 2em;
+      font-weight: bold;
+      color: #bbb;
+      margin-bottom: 8px;
+      z-index: 2;
+    }
+    .cat-face {
+      color: #ff69b4;
+      font-size: 2.2em;
+      margin-bottom: 24px;
+      z-index: 2;
+    }
+    .meow-stack {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      z-index: 2;
+    }
+    .meow {
+      font-size: 3em;
+      font-weight: 900;
+      color: #c084fc;
+      text-shadow: 0 0 20px rgba(192,132,252,0.8);
+    }
+    .quote {
+      font-style: italic;
+      color: #bbb;
+      margin-top: 32px;
+      z-index: 2;
+    }
+    .meow-footer {
+      color: #ff69b4;
+      font-weight: 600;
+      margin-top: 12px;
+      z-index: 2;
+    }
+    button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #f64f59, #c471ed, #12c2e9);
+      color: #fff;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 100;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="location.href='index2.html'">⬅ Back</button>
+  <div class="container">
+    <div class="floating-cats" id="floating-cats"></div>
+    <div class="mystery">kuch nhi.. IDK
+    </div>
+    <div class="cat-face">😺</div>
+    <div class="meow-stack">
+      <div class="meow">MEOW</div>
+      <div class="meow">MEOW</div>
+      <div class="meow">MEOW</div>
+    </div>
+    <div class="quote">"Some mysteries are meant to stay mysterious..."</div>
+    <div class="meow-footer">MEOW MEOW MEOW! 🐾</div>
+  </div>
+  <script>
+    // Floating Cat Emojis
+    const floatingCats = document.getElementById('floating-cats');
+    for (let i = 0; i < 15; i++) {
+      const cat = document.createElement('span');
+      cat.className = 'cat';
+      cat.textContent = '🐱';
+      cat.style.top = Math.random() * 100 + '%';
+      cat.style.left = Math.random() * 100 + '%';
+      cat.style.animationDuration = (2 + Math.random() * 3) + 's';
+      floatingCats.appendChild(cat);
+    }
+  </script>
+</body>
+</html>
